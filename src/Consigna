@@ -1,0 +1,32 @@
+https://www.hackerrank.com/challenges/java-2d-array/problem?isFullScreen=true
+
+FUNCION SUMATORIA
+
+int maxSum = Integer.MIN_VALUE;: Inicializa maxSum con el valor mínimo posible de un entero, para asegurarse de que cualquier suma válida sea mayor que este valor.
+
+El bucle for externo (for (int i = 0; i <= 3; i++)) recorre las filas de la matriz hasta la tercera fila desde el final (pues estamos buscando bloques 3x3).
+
+El bucle for interno (for (int j = 0; j <= 3; j++)) recorre las columnas de la matriz hasta la tercera columna desde el final.
+
+int currentSum = sumOf3x3Block(matriz, i, j);: Llama a la función sumOf3x3Block para calcular la suma del bloque 3x3 actual, dado su esquina superior izquierda (i, j).
+
+maxSum = Math.max(maxSum, currentSum);: Actualiza maxSum tomando el máximo entre el valor actual de maxSum y la currentSum calculada. Esto asegura que maxSum mantenga la mayor suma encontrada hasta ahora.
+
+Al final del bucle, la función devuelve la mayor suma encontrada (maxSum).
+
+
+FUNCION SUM3X3
+int suma = 0;: Inicializa la variable suma para almacenar la suma acumulada del bloque.
+
+El primer bucle for (for (int i = row; i < row + 3; i++)) recorre las filas del bloque, desde row hasta row + 3.
+
+El segundo bucle for interno (for (int j = col; j < col + 3; j++)) recorre las columnas del bloque, desde col hasta col + 3.
+
+suma += matriz.get(i).get(j);: Agrega el valor del elemento actual a la suma acumulada.
+
+Al final de los bucles, la función devuelve la suma total del bloque 3x3.
+
+
+
+
+
